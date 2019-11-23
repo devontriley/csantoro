@@ -7,7 +7,14 @@
 </head>
 <body>
 
-    Chris is a little weenie boy
+<nav id="primary-nav">
+    <a href="<?php bloginfo('url'); ?>">
+        <img src="<?php bloginfo('template_directory'); ?>/images/S-Icon.svg" class="s-icon" />
+    </a>
 
-</body>
-</html>
+    <img src="<?php bloginfo('template_directory'); ?>/images/Santoro.svg" class="santoro" />
+
+    <a href="">
+        <img src="<?php bloginfo('template_directory'); ?>/images/Hamburger.svg" class="hamburger" />
+    </a>
+</nav>

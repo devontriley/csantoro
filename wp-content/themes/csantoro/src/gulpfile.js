@@ -60,8 +60,7 @@ function scripts() {
 
 function styles() {
     return gulp.src([
-            paths.styles.src,
-            paths.modules.src+'/bootstrap/scss/**.scss'
+            paths.styles.src
         ],
         { sourcemaps: true })
         .pipe(sass().on('error', sass.logError))

@@ -1,0 +1,11 @@
+body {
+    color: #fff;
+    background: $darkBlue;
+    @media(min-width: 992px) {
+        padding-left: 100px;
+    }
+}
+
+.darkBlue { color: $darkBlue; }
+.lightBlue { color: $lightBlue; }
+.yellow { color: $yellow; }
