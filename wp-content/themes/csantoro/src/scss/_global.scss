@@ -4,8 +4,17 @@ body {
     @media(min-width: 992px) {
         padding-left: 100px;
     }
+
+    &.primary-nav-active {
+        overflow: hidden;
+    }
 }
 
 .darkBlue { color: $darkBlue; }
 .lightBlue { color: $lightBlue; }
 .yellow { color: $yellow; }
+
+
+h2 {
+    margin-bottom: 1em;
+}

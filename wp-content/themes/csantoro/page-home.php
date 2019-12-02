@@ -2,8 +2,15 @@
 /* Template Name: Home */
 get_header(); ?>
 
-<section id="home-carousel">
+<nav id="home-carousel-nav">
+    <a href="#" class="active">INTRO</a>
+    <a href="#" class="">1</a>
+    <a href="#" class="">2</a>
+    <a href="#" class="">3</a>
+    <a href="#" class="">4</a>
+</nav>
 
+<section id="home-carousel">
     <section id="home-carousel__pane-1" class="home-carousel__pane">
         <div class="inner">
             <div class="copy">
@@ -44,7 +51,46 @@ get_header(); ?>
             </div>
         </div>
     </section>
+</section>
 
+<section id="newsletter-signup">
+    <div class="inner">
+        <h2>Sign up for our newsletter</h2>
+
+        <form>
+            <div class="fields">
+                <div class="field">
+                    <input type="text" value="" placeholder="First Name" />
+                </div>
+
+                <div class="field">
+                    <input type="text" value="" placeholder="Last Name" />
+                </div>
+
+                <div class="field">
+                    <input type="email" value="" placeholder="Email Address" />
+                </div>
+            </div>
+
+            <input type="submit" value="Sign Me Up" class="btn btn-outline-secondary" />
+        </form>
+    </div>
+</section>
+
+<section id="schedule-call">
+    <div class="inner">
+        <h2>It all starts with a conversation...</h2>
+        <p>Full rebrand? New marketing materials? Want to spice up this year’s tradeshow booth design? Let us know how Santoro Design can help you.</p>
+        <a href="#" class="btn btn-outline-secondary">Schedule a Call</a>
+    </div>
+
+    <svg class="small-s" viewBox="0 0 62.487 75.86">
+        <use xlink:href="#s-icon"></use>
+    </svg>
+
+    <svg class="large-s" viewBox="0 0 62.487 75.86">
+        <use xlink:href="#s-icon"></use>
+    </svg>
 </section>
 
 <?php get_footer(); ?>

@@ -1,3 +1,41 @@
+#home-carousel-nav {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    @media(min-width: 992px) {
+        display: block;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        position: relative;
+        color: #fff;
+
+        &:hover {
+            text-decoration: none;
+            color: $yellow;
+        }
+
+        &.active {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                transform: translateY(-50%);
+                width: calc(100% + 20px);
+                height: 1px;
+                background-color: $yellow;
+            }
+        }
+    }
+}
+
 #home-carousel {
     .home-carousel__pane {
         width: 100%;
@@ -15,10 +53,13 @@
         }
 
         .row {
+            display: block;
             height: 100%;
             width: 100%;
-            display: flex;
-            align-items: center;
+            @media(min-width: 992px) {
+                display: flex;
+                align-items: center;
+            }
 
             div[class*=col] {
 
@@ -39,9 +80,13 @@
                 }
 
                 &.image {
+                    height: 330px;
                     align-self: stretch;
                     background: #ccc;
                     padding: 0;
+                    @media(min-width: 992px) {
+                        height: auto;
+                    }
 
                     &.flip {
                         order: 2;

@@ -1,0 +1,39 @@
+#schedule-call {
+    position: relative;
+    overflow: hidden;
+
+    .inner {
+        padding: 50px 20px;
+        margin: 0 auto;
+        max-width: 900px;
+        @media(min-width: 992px) {
+            padding: 10vw 20px;
+            text-align: center;
+        }
+    }
+
+    .btn {
+        margin-top: 50px;
+    }
+
+    .small-s {
+        position: absolute;
+        right: 10vw;
+        top: 0;
+        fill: #fff;
+        opacity: .15;
+        width: 150px;
+        height: auto;
+    }
+
+    .large-s {
+        position: absolute;
+        left: 10vw;
+        bottom: 0;
+        transform: translateY(50%);
+        fill: #fff;
+        opacity: .15;
+        width: 300px;
+        height: auto;
+    }
+}

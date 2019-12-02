@@ -1,0 +1,48 @@
+#newsletter-signup {
+    .inner {
+        padding: 50px 20px;
+        margin: 0 auto;
+        max-width: 900px;
+        @media(min-width: 992px) {
+            padding: 10vw 20px;
+            text-align: center;
+        }
+    }
+
+    .fields {
+        @media(min-width: 992px) {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 0 -10px;
+        }
+    }
+
+    .field {
+        margin-bottom: 15px;
+        @media(min-width: 992px) {
+            flex: 1 0 auto;
+            margin: 0 10px;
+        }
+    }
+
+    input[type=text],
+    input[type=email] {
+        width: 100%;
+        border: 2px solid $lightBlue;
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: $lightBlue;
+        background: transparent;
+
+        &::placeholder {
+            color: $lightBlue;
+        }
+    }
+
+    .btn {
+        margin-top: 50px;
+    }
+}

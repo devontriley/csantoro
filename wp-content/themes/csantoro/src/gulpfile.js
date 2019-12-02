@@ -43,9 +43,10 @@ const clean = () => del(['./../main.js'], { force: true });
 
 // Compile js files
 
-function scripts() {
+function scripts()
+{
     return gulp.src([
-        //paths.modules.src+'/js-cookie/src/js.cookie.js',
+        paths.modules.src+'/jquery/dist/jquery.js',
         paths.scripts.src
     ], { sourcemaps: true })
         .pipe(babel({
@@ -94,7 +95,8 @@ function serve(done) {
 }
 
 // Default task
-gulp.task('default', gulp.series(clean, scripts, styles, serve, () => {
+gulp.task('default', gulp.series(clean, scripts, styles, serve, () =>
+{
     gulp.watch(paths.scripts.src, gulp.series(scripts, reload));
     gulp.watch(paths.styles.src, gulp.series(styles, reload));
 }));
