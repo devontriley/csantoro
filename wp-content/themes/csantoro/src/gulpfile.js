@@ -47,6 +47,7 @@ function scripts()
 {
     return gulp.src([
         paths.modules.src+'/jquery/dist/jquery.js',
+        paths.modules.src+'/underscore/underscore.js',
         paths.scripts.src
     ], { sourcemaps: true })
         .pipe(babel({

@@ -32,21 +32,35 @@ mobileHamburger.on('click', function(e)
 });
 
 /**
+ * Home Carousel Scroll
+ */
+new fullpage('#fullpage', {
+    //options here
+    autoScrolling:true,
+    scrollHorizontally: true,
+    licenseKey: '22FEA003-05344C69-A612FC86-8A75C837',
+    easing: 'easeOutCubic',
+    onLeave: function(origin, destination, direction)
+    {
+        let index = destination.index;
+
+        $('a', homeCarouselNav).removeClass('active');
+        $(homeCarouselNav).find('a:eq('+index+')').addClass('active');
+    }
+});
+
+/**
  * Home Carousel Navigation
  */
 $('a', homeCarouselNav).on('click', function(e)
 {
     e.preventDefault();
 
-    let index = $(this).index(),
-        nextPane = $('#home-carousel__pane-'+(index+1)),
-        nextPaneTop = nextPane.offset().top;
+    let index = $(this).index();
 
     $('.active', homeCarouselNav).removeClass('active');
 
     $(this).addClass('active');
 
-    $('html, body').animate({
-        scrollTop: nextPaneTop
-    }, 1000);
+    fullpage_api.moveTo(index + 1);
 });

@@ -6,6 +6,8 @@
     <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet" />
 
     <?php wp_head(); ?>
+
+    <link rel="stylesheet" href="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.css">
 </head>
 <body>
 

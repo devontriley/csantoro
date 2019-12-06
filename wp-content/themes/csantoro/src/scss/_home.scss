@@ -37,9 +37,9 @@
 }
 
 #home-carousel {
+
     .home-carousel__pane {
         width: 100%;
-        height: 100vh;
 
         .inner {
             display: flex;
@@ -85,7 +85,7 @@
                     background: #ccc;
                     padding: 0;
                     @media(min-width: 992px) {
-                        height: auto;
+                        height: 100%;
                     }
 
                     &.flip {
