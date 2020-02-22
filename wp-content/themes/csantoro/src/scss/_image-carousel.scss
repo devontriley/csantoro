@@ -1,0 +1,15 @@
+.image-carousel {
+    @media(min-width: 992px) {
+        width: 90%;
+        margin-left: 10%;
+    }
+
+    .glide__slide {
+        width: auto !important;
+
+        img {
+            max-height: 40vh;
+            width: auto;
+        }
+    }
+}

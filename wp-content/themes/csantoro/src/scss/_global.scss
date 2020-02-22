@@ -1,6 +1,8 @@
 body {
     color: #fff;
     background: $darkBlue;
+    font-family: $font-din;
+    font-weight: 300;
     @media(min-width: 992px) {
         padding-left: 100px;
     }
@@ -11,10 +13,69 @@ body {
 }
 
 .darkBlue { color: $darkBlue; }
+.darkestBlue { color: $darkestBlue; }
 .lightBlue { color: $lightBlue; }
 .yellow { color: $yellow; }
 
 
 h2 {
     margin-bottom: 1em;
+}
+
+.h2 {
+    color: $lightBlue;
+    font-family: $font-balboa;
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    max-width: none;
+}
+
+.section-header {
+    // Used on about
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    font-family: $font-din;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    @media(min-width: 992px) {
+        font-size: 30px;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 30%;
+        height: 2px;
+        margin: 20px auto;
+        background: $yellow;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+*::selection {
+    background-color: $lightBlue;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+
+.cover-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
 }

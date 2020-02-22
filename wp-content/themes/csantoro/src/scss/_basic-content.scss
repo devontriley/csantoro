@@ -1,0 +1,31 @@
+.basic-content {
+    .inner {
+        @media(min-width: 992px) {
+            padding: 80px 135px;
+            margin-left: 10%;
+            width: 90%;
+        }
+
+        h1, h2 {
+            font-family: $font-balboa;
+            color: $yellow;
+            text-transform: uppercase;
+            font-size: 90px;
+            margin-bottom: .3em;
+            line-height: 1;
+        }
+
+        h3 {
+            font-family: $font-din;
+            font-weight: 700;
+            color: $lightBlue;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7em;
+            letter-spacing: .5px;
+        }
+    }
+}

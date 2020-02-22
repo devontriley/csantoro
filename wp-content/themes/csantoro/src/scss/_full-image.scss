@@ -1,0 +1,44 @@
+.full-image {
+    margin: 50px 0;
+
+    .inner {
+        position: relative;
+        @media(min-width: 992px) {
+            width: 90%;
+            margin-left: 10%;
+        }
+    }
+
+    .row {
+        margin: 0px;
+    }
+
+    div[class*="col"] {
+        padding: 0;
+    }
+
+    .overlay-copy {
+        z-index: 1;
+        position: relative;
+        background: $darkBlue;
+        color: #fff;
+        border: 2px solid $yellow;
+        padding: 20px;
+        margin: -5vh auto 0 auto;
+        width: calc(100% - 40px);
+        @media(min-width: 992px) {
+            padding: 80px 135px;
+            margin: -10vh auto 0 auto;
+            width: calc(100% - 20vw);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

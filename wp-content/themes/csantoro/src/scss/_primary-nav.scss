@@ -1,12 +1,29 @@
+@keyframes fadeInAndSlideOut {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 #primary-nav {
     display: none;
     position: fixed;
     z-index: 2000;
     left: 0;
     top: 0;
-    transform: translateY(-100%);
+    transform: translate(-100%, -100%);
     width: 100%;
     background: #fff;
+    opacity: 0;
+    animation-name: fadeInAndSlideOut;
+    animation-duration: 500ms;
+    animation-delay: 1800ms;
+    animation-fill-mode: forwards;
     @media(min-width: 992px) {
         transform: none;
         width: 100px;

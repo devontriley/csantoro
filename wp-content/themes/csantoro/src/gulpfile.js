@@ -54,6 +54,7 @@ function scripts()
             presets: ['@babel/env']
         }))
         //.pipe(uglify())
+        //.pipe(concat(paths.modules.src+'/@glidejs/glide/dist/glide.min.js'))
         .pipe(concat('main.js'))
         .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -62,10 +63,12 @@ function scripts()
 
 function styles() {
     return gulp.src([
-            paths.styles.src
+            paths.modules.src+'/@glidejs/glide/dist/css/glide.core.css',
+            paths.styles.src,
         ],
         { sourcemaps: true })
         .pipe(sass().on('error', sass.logError))
+        .pipe(concat('style.css'))
         .pipe(gulp.dest(paths.styles.dest));
 }
 

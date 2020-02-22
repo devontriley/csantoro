@@ -8,6 +8,9 @@ add_action( 'init', 'create_custom_post_types' );
 // Disable Gutenberg
 add_filter('use_block_editor_for_post', '__return_false', 10);
 
+// Add post thumbnail support
+add_theme_support('post-thumbnails');
+
 // Enqueue Scripts
 function load_custom_scripts()
 {

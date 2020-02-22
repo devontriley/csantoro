@@ -1,0 +1,17 @@
+.image-copy-5050 {
+    .inner {
+        @media(min-width: 992px) {
+            margin-left: 10%;
+            width: 90%;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-copy-5050 + & .image {
+        order: 2;
+    }
+}

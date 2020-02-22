@@ -1,0 +1,267 @@
+#home-carousel.about-carousel {
+    margin: 0;
+    width: 100%;
+
+    .home-carousel__pane {
+
+        .row {
+            width: auto;
+            height: auto;
+        }
+
+        .section-header {
+            max-width: 300px;
+        }
+    }
+
+    #home-carousel__pane-1 {
+        background: none;
+        height: 100vh;
+
+        .copy {
+            max-width: 80%;
+        }
+
+        .about-header-1 {
+            font-family: $font-din;
+            color: $yellow;
+            text-transform: uppercase;
+            font-size: 50px;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .about-header-2 {
+            font-family: $font-balboa;
+            font-size: 300px;
+            margin: 0;
+            line-height: 1;
+            -webkit-text-stroke: 2px $lightBlue; // This doesn't work on IE: https://caniuse.com/#feat=text-stroke
+            color: transparent;
+            letter-spacing: 10px;
+        }
+
+        .about-header-3 {
+            font-family: $font-din;
+            font-size: 35px;
+            color: #fff;
+            margin: 0;
+            line-height: 1;
+            transform: translateY(-60%); // The helps fix the top positioning relative to the about-header-2 because of it's large line-height
+        }
+
+        .s-icon {
+            width: 30vw;
+            height: auto;
+            fill: $lightBlue;
+            opacity: .05;
+            mix-blend-mode: overlay;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    #home-carousel__pane-2 {
+        height: 100vh;
+
+        .row {
+            max-width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            align-items: flex-start;
+            @media(min-width: 1500px) {
+                max-width: 1120px;
+            }
+        }
+
+        .h2 {
+            @extend .h2;
+        }
+
+        p {
+            font-size: 14px;
+            letter-spacing: .5px;
+            font-family: $font-din;
+            line-height: 1.7em;
+            max-width: 90%;
+            @media(min-width: 992px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    #home-carousel__pane-3 {
+        min-height: 100vh;
+        margin: 50px auto;
+        @media(min-width: 992px) {
+            margin: 200px auto;
+        }
+
+        .inner {
+            width: 80%;
+            margin: 0 10%;
+            flex-wrap: wrap;
+        }
+
+        div[class*="col"] {
+            margin-bottom: 30px;
+        }
+    }
+
+    #home-carousel__pane-4 {
+        min-height: 100vh;
+        margin: 50px auto;
+        @media(min-width: 992px) {
+            margin: 200px auto;
+        }
+
+        .inner {
+            width: 80%;
+            margin: 0 10%;
+            flex-wrap: wrap;
+        }
+
+        div[class*="col"] {
+            margin-bottom: 30px;
+        }
+    }
+
+    #home-carousel__pane-5 {
+        min-height: 100vh;
+        margin: 50px auto;
+        @media(min-width: 992px) {
+            margin: 200px auto;
+        }
+
+        .headshot {
+            margin-bottom: -50px;
+        }
+
+        p.h1 {
+            font-family: $font-balboa;
+            font-size: 100px;
+            text-transform: uppercase;
+            color: $yellow;
+            line-height: 1;
+        }
+
+        p.h2 {
+            font-family: $font-din;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        p {
+            font-size: 14px;
+            letter-spacing: .5px;
+            font-family: $font-din;
+            line-height: 1.7em;
+            @media(min-width: 992px) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.service-cards {
+    flex: 0 0 100%;
+    width: 100%;
+
+    .card {
+        background: none;
+        border: 1px solid $lightBlue;
+        padding: 20px;
+        display: block;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            margin-left: auto;
+            margin-bottom: 40px;
+            width: 40%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+
+            svg {
+                fill: $yellow;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .h3 {
+            color: $lightBlue;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .h4 {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        hr {
+            border: none;
+            background: #fff;
+            width: 100%;
+            height: 1px;
+            display: block;
+            margin: 20px 0;
+        }
+    }
+}
+
+.value-cards {
+    flex: 0 0 100%;
+    width: 100%;
+
+    .card {
+        background: #031521;
+        border: 1px solid #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        min-height: 25vh;
+        text-align: center;
+
+        p {
+            font-size: 20px;
+            line-height: 1.5em;
+            margin: 0;
+
+            &:before {
+                content: "01";
+                font-family: $font-din;
+                font-weight: 700;
+                color: transparent;
+                -webkit-text-stroke: 1px #73EEDC;
+                font-size: 30px;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    div[class*=col]:nth-child(2) .card p:before { content: "02"; }
+    div[class*=col]:nth-child(3) .card p:before { content: "03"; }
+    div[class*=col]:nth-child(4) .card p:before { content: "04"; }
+    div[class*=col]:nth-child(5) .card p:before { content: "05"; }
+    div[class*=col]:nth-child(6) .card p:before { content: "06"; }
+    div[class*=col]:nth-child(7) .card p:before { content: "07"; }
+    div[class*=col]:nth-child(8) .card p:before { content: "08"; }
+    div[class*=col]:nth-child(9) .card p:before { content: "09"; }
+    div[class*=col]:nth-child(10) .card p:before { content: "10"; }
+    div[class*=col]:nth-child(11) .card p:before { content: "10"; }
+    div[class*=col]:nth-child(12) .card p:before { content: "12"; }
+}

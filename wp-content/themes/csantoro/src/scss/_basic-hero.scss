@@ -1,0 +1,22 @@
+.basic-hero {
+    height: 100vh;
+    max-height: 60vh;
+    background: $darkestBlue;
+
+    .inner {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: 100%;
+        padding-left: 10%;
+    }
+
+    h1 {
+        font-family: $font-balboa;
+        font-size: 50px;
+        color: $yellow;
+        @media(min-width: 992px) {
+            font-size: 100px;
+        }
+    }
+}

@@ -11157,6 +11157,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 })();
 "use strict";
 
+if ($('.glide').length) {
+  new Glide('.glide', {
+    peek: 10,
+    focusAt: 'center'
+  }).mount();
+}
+
 var body = $('body'),
     primaryHamburger = $('#primary-hamburger'),
     mobileHamburger = $('#mobile-hamburger'),
@@ -11193,12 +11200,22 @@ new fullpage('#fullpage', {
   //options here
   autoScrolling: true,
   scrollHorizontally: true,
+  scrollOverflow: true,
+  scrollOverflowOptions: {},
   licenseKey: '22FEA003-05344C69-A612FC86-8A75C837',
   easing: 'easeOutCubic',
   onLeave: function onLeave(origin, destination, direction) {
     var index = destination.index;
+    var firstPanel = $('#home-carousel__pane-1');
+    index == 0 ? firstPanel.removeClass('animateOut') : firstPanel.addClass('animateOut');
     $('a', homeCarouselNav).removeClass('active');
     $(homeCarouselNav).find('a:eq(' + index + ')').addClass('active');
+  },
+  afterLoad: function afterLoad(origin, destination, direction) {
+    var firstPanel = $('#home-carousel__pane-1');
+    setTimeout(function () {
+      firstPanel.addClass('animateIn');
+    }, 1000);
   }
 });
 /**
@@ -11212,3 +11229,32 @@ $('a', homeCarouselNav).on('click', function (e) {
   $(this).addClass('active');
   fullpage_api.moveTo(index + 1);
 });
+/**
+ * Work Grid
+ */
+
+new fullpage('#work-grid-fullpage', {
+  autoScrolling: true,
+  scrollHorizontally: false,
+  licenseKey: '22FEA003-05344C69-A612FC86-8A75C837',
+  easing: 'easeOutCubic',
+  onLeave: function onLeave(origin, destination, direction) {
+    var index = destination.index;
+    $('div[class*="col"]', origin.item).addClass('animateOut');
+    $('div[class*="col"]', destination.item).removeClass('animateOut').addClass('animateIn');
+  },
+  afterLoad: function afterLoad(origin, destination, direction) {
+    var firstPanel = $('#home-carousel__pane-1');
+  }
+});
+/**
+ * Work Nav
+ */
+// $('.work-prev, .work-next').on('click', function(e)
+// {
+//     e.preventDefault();
+//
+//     let direction = $(this).attr('data-direction');
+//
+//
+// });

@@ -23,7 +23,7 @@ function create_custom_post_types( )
         'description'         => __( 'Custom CPT to Manage Case Studies.' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor', 'author', 'thumbnail'),
-        'hierarchical'        => false,
+        'hierarchical'        => true,
         'public'              => true,
         'exclude_from_search' => true,
         'show_ui'             => true,

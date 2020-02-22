@@ -39,9 +39,9 @@
 
 <div id="primary-nav-drawer">
     <nav id="primary-nav-drawer-nav">
-        <a href="#">The Work</a>
-        <a href="#">About Santoro</a>
-        <a href="#">The Process Book</a>
+        <a href="<?php bloginfo('url'); ?>/work">The Work</a>
+        <a href="<?php bloginfo('url'); ?>/about">About Santoro</a>
+        <a href="<?php bloginfo('url'); ?>/process-book">The Process Book</a>
     </nav>
 
     <div>

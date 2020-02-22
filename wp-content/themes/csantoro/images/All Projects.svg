@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.824 73.33">
+    <path d="M50.8,5.343H3.887v73.33H95.711V5.343Zm-2,71.33H5.887V7.343H48.8Zm44.913,0H50.8V7.343H93.711Z" transform="translate(-3.887 -5.343)"/>
+    <path d="M44.94,72.67H9.567V37.3H44.94Zm-33.373-2H42.94V39.3H11.567Z" transform="translate(-3.887 -5.343)"/>
+    <rect width="31.954" height="2" transform="translate(7.035 8.117)"/>
+    <rect width="31.954" height="2" transform="translate(7.035 13.502)"/>
+    <rect width="31.954" height="2" transform="translate(7.035 18.887)"/>
+    <rect width="31.954" height="2" transform="translate(7.035 24.271)"/>
+    <rect width="31.953" height="2" transform="translate(52.894 48.945)"/>
+    <rect width="31.953" height="2" transform="translate(52.894 54.33)"/>
+    <rect width="31.953" height="2" transform="translate(52.894 59.715)"/>
+    <rect width="31.953" height="2" transform="translate(52.894 65.1)"/>
+    <path d="M72.75,48.043A18.117,18.117,0,1,1,90.868,29.926,18.137,18.137,0,0,1,72.75,48.043Zm0-34.234A16.117,16.117,0,1,0,88.868,29.926,16.135,16.135,0,0,0,72.75,13.809Z" transform="translate(-3.887 -5.343)"/>
+</svg>
