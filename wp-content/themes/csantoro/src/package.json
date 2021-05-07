@@ -39,6 +39,6 @@
     "js-cookie": "^2.2.0",
     "popper.js": "^1.15.0",
     "postcss-assets": "^5.0.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   }
 }
